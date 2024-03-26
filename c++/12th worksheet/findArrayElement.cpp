@@ -8,10 +8,12 @@ int main(){
   cout << "enter array size: ";
   cin >> size;
   int arr[size]={0};
+
   cout << "enter array elements:\n";
   for (int i = 0; i < size;i++){
     cin >> arr[i];
   }
+  
   cout << "enter the element you are searching for in the array: ";
   cin >> elem;
   for(int i:arr){
