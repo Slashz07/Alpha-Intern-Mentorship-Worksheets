@@ -9,7 +9,7 @@ int main(){
   cin >> a >> b;
   num1 = &a;
   num2 = &b;
-  cout << "Sum of numbers : " << (*num1) + (*num2);
+  cout << "Sum  of numbers : " << (*num1) + (*num2);
   return 0;
   return 0;
 }
