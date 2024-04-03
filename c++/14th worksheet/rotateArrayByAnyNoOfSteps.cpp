@@ -1,5 +1,4 @@
-// Rotate the given array ‘a’ by k steps, where k is 
-//stepon-negative. 
+// Rotate the given array ‘a’ by k steps, where k is non-negative. 
 #include<iostream>
 #include<vector>
 using namespace std;
