@@ -11,4 +11,4 @@ int main(){
   int sumOfNNaturalNo = (size - 1) * (size) / 2;
   cout << "Duplicate Value: " << arrSum - sumOfNNaturalNo;
   return 0;
-}
+}3
