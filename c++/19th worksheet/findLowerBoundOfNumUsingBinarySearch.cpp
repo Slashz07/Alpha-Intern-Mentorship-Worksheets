@@ -11,14 +11,12 @@ int main()
   while (i <= l)
   {
     int mid = i + (l - i) / 2;
-    if (arr[mid] <= x)
-    {
-      i = mid + 1;
-    }
-    else
-    {
+  if(arr[mid]>=x)
+  {
       ans = arr[mid];
       l = mid - 1;
+    }else{
+      i = mid + 1;
     }
   }
   if (ans == 0)
