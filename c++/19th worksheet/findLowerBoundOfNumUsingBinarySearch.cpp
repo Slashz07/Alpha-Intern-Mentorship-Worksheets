@@ -1,21 +1,27 @@
 // Given a sorted integer array and an integer
-// ‘x’, find the upper bound of x
+// ‘x’, find the lower bound of x
 #include <iostream>
 using namespace std;
 
 int main()
 {
-  int arr[] = {1, 2, 3, 4, 5, 8, 9, 11, 15};
+  int arr[] = {1, 2, 3, 4, 5,6, 8, 9, 11, 15};
   int i = 0, l = sizeof(arr) / sizeof(arr[0]) - 1, ans = 0;
   int x = 6;
   while (i <= l)
   {
     int mid = i + (l - i) / 2;
-  if(arr[mid]>=x)
-  {
+    if(arr[mid]==x){
+      ans = arr[mid];
+      break;
+    }
+    else if (arr[mid] > x)
+    {
       ans = arr[mid];
       l = mid - 1;
-    }else{
+    }
+    else
+    {
       i = mid + 1;
     }
   }
