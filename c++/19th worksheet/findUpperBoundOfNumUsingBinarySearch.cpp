@@ -23,9 +23,9 @@ int main()
   }
   if (ans == 0)
   {
-    cout << "the array doesnt contain any lowerbound value";
+    cout << "the array doesnt contain any upperbound value";
   }
   else
-    cout << "the lowerbound is: " << ans;
+    cout << "the upperbound is: " << ans;
   return 0;
 }
