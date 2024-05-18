@@ -1,4 +1,4 @@
-// adding two arrays like theoritical maths addition
+//   
 #include<iostream>
 using namespace std;
 
