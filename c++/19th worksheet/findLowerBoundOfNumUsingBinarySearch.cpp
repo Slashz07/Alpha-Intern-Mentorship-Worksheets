@@ -1,6 +1,6 @@
 // Given a sorted integer array and an integer
 // ‘x’, find the lower bound of x
-#include <iostream>
+#include <iostream> 
 using namespace std;
 
 int main()
