@@ -1,3 +1,7 @@
+#include<iostream>
+using namespace std;
+
+
 float sqrt(int num)
 {
   int s = 0, e = num;
