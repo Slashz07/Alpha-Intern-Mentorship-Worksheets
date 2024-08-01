@@ -11,8 +11,8 @@ int main(){
     cin>>num;
    
     for(int i=0;i<2;i++){
-         int beg=vec1[0];
-         int end=vec1[vec1.size()-1];
+         int beg=0;
+         int end=vec1.size()-1;
          int mid=(beg+end)/2;
          int numFound=0;
 
@@ -32,15 +32,17 @@ int main(){
             end=mid-1;
         }
         mid=(beg+end)/2;
+
     }
 
-     if(numFound&&i==0){
+       if(numFound !=-1 &&i==0){
         cout<<"num last occurence found  at index :"<<numFound;
     }
-    else if(numFound&&i==1){
+    else if(numFound !=-1 &&i==1){
         cout<<"num first occurence found  at index :"<<numFound;
     }else{
         cout<<"given number isnt present in the vector array";
+        break;
     }
 
     }
