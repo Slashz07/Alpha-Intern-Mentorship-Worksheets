@@ -1,73 +1,58 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class stack
-{
-public:
-    stack *next;
+struct node{
     int data;
-
-    stack(int data)
-    {
-        this->data = data;
-        this->next = NULL;
-    }
-
-
-    void push(stack* &top, int data)
-    {
-            // stack *temp = head;
-            // for (int i = 0; i < top; i++)
-            // {
-            //     temp = temp->next;
-            // }
-            // stack *node = new stack(data);
-            // temp->next = node;
-            // top++;
-            stack *node=new stack(data);
-            node->next=top;
-            top=node;
-    }
-
-    void pop(stack* &top)
-    {
-        if (top == NULL)
-        {
-            cout << "the stack is already empty";
-        }
-        else
-        {
-        stack* temp=top;
-        top=top->next;
-        delete temp;
-        }
-    }
-
-    void printStack(stack* top){
-        if(top==NULL){
-            cout<<"stack is empty,nothing to traverse";
-        }else{
-            stack *temp=top;
-            while(temp!=NULL){
-                cout<<temp->data<<" ";
-                temp=temp->next;
-            }
-        }
-    }
+    node* next;
 };
 
-int main()
-{
-    stack *node = new stack(5);
-    stack *top=node;
-    // stack*tail=node;
-    node->push(top,7);
-    node->push(top,71);
-    node->push(top,77);
-    node->push(top,87);
-    node->pop(top);
-    node->pop(top);
-    node->pop(top);
-    node->printStack(top);
+class stack{
+
+    node* top;
+
+    public:
+    int size;
+
+    stack(){
+        size=0;
+        top=NULL;
+    }
+
+    void push(int data){
+        node *temp=new node();
+        temp->data=data;
+        temp->next=top;
+        top=temp;
+        size++;
+    }
+
+    void pop(){
+        if(top==NULL){
+            cout<<"stack is already empty";
+        }else{
+            node* temp=top;
+            top=top->next;
+            size--;
+            delete temp;
+        }
+    }
+
+    void printStack(){
+        node* temp=top;
+        while(temp!=NULL){
+            cout<<temp->data<<" ";
+            temp=temp->next;
+        }
+    }
+
+};
+
+int main(){
+    stack *myStack=new stack();
+    myStack->push(7);
+    myStack->push(71);
+    myStack->push(24);
+    myStack->pop();
+    myStack->printStack();
     return 0;
 }
