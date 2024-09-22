@@ -45,6 +45,10 @@ class stack{
         }
     }
 
+    int getSize(){
+        return size;
+    }
+
 };
 
 int main(){
@@ -53,6 +57,7 @@ int main(){
     myStack->push(71);
     myStack->push(24);
     myStack->pop();
+    cout<<myStack->getSize()<<endl;
     myStack->printStack();
     return 0;
 }
